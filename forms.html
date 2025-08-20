@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing & Size Form</title>
+    <style>
+        body {
+            background: purple;
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: #fff;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 3px solid purple;
+            border-radius: 0;
+        }
+        h2 {
+            text-align: left;
+            color: purple;
+            background: #fff;
+            border: 2px solid purple;
+            margin: 0 0 10px 0;
+            padding: 8px;
+            border-radius: 0;
+        }
+        label {
+            display: block;
+            margin: 10px 0 2px 0;
+            color: purple;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 4px;
+            border: 2px solid purple;
+            border-radius: 0;
+            box-sizing: border-box;
+            background: #eee;
+            color: #222;
+            font-family: monospace;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 6px;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+        button {
+            margin-top: 14px;
+            width: 100%;
+            padding: 8px;
+            background: purple;
+            color: #fff;
+            border: 2px solid #222;
+            border-radius: 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #222;
+        }
+        a {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            color: purple;
+            background: #fff;
+            border: 2px solid purple;
+            padding: 6px;
+            text-decoration: underline;
+            border-radius: 0;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Clothing & Size Survey</h2>
+        <form>
+            <label for="name">1. What is your name?</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">2. What is your email?</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fav-type">3. What is your favorite type of clothing?</label>
+            <select id="fav-type" name="fav-type" required>
+                <option value="">Select...</option>
+                <option value="tshirt">T-shirt</option>
+                <option value="jeans">Jeans</option>
+                <option value="dress">Dress</option>
+                <option value="jacket">Jacket</option>
+                <option value="shorts">Shorts</option>
+            </select>
+
+            <label>4. What is your preferred size?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="size" value="S" required> S</label>
+                <label><input type="radio" name="size" value="M"> M</label>
+                <label><input type="radio" name="size" value="L"> L</label>
+                <label><input type="radio" name="size" value="XL"> XL</label>
+            </div>
+
+            <label for="height">5. What is your height (cm)?</label>
+            <input type="number" id="height" name="height" min="100" max="250" required>
+
+            <label>6. Which colors do you prefer? (Select all that apply)</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="color" value="red"> Red</label>
+                <label><input type="checkbox" name="color" value="blue"> Blue</label>
+                <label><input type="checkbox" name="color" value="black"> Black</label>
+                <label><input type="checkbox" name="color" value="white"> White</label>
+            </div>
+
+            <label for="comments">7. Any comments or suggestions?</label>
+            <textarea id="comments" name="comments" rows="3"></textarea>
+
+            <label for="dob">8. What is your date of birth?</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <a href="https://sweet-pea-afk.github.io/atvs/index.html">Check all the other websites.</a>
+</body>
+</html>
